@@ -1,0 +1,37 @@
+seed: 1234
+label_column: label
+cv:
+  n_splits: 10
+  shuffle: true
+augmentation:
+  enabled: true
+  breast_only: true
+  n_threshold: 150
+  sigma: 0.01
+rmvae:
+  epochs: 100
+  batch_size: 32
+  learning_rate: 0.001
+  beta: 0.5
+  lambda: 0.1
+  geometry_epsilon: 0.001
+  projection_dimension: 128
+  finite_difference_delta: 0.001
+  geometry_batch_size: 1
+  hidden_units:
+  - 512
+  - 256
+  decoder_units:
+  - 256
+  - 512
+  latent_dim: 64
+dnn:
+  epochs: 100
+  batch_size: 32
+  learning_rate: 0.001
+  patience: 10
+  hidden_units:
+  - 128
+  - 64
+  dropout: 0.0
+dataset: lung
